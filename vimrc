@@ -54,7 +54,7 @@ set incsearch		" Incremental search
 "set hidden		" Hide buffers when they are abandoned
 "set mouse=a		" Enable mouse usage (all modes)
 set autoindent
-set number		"Enable number of lines on right margin
+set number relativenumber	"Enable number of lines on right margin and make it relative
 set cindent		"Enable c style indenting for c related files
 
 " Source a global configuration file if available
