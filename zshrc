@@ -80,6 +80,7 @@ export GBT__HOME='/usr/share/gbt'
 if [ -f $GBT__HOME/sources/gbts/cmd/local.sh ]; then
     source $GBT__HOME/sources/gbts/cmd/local.sh
 fi
+alias ssh=gbt_ssh
 
 # Basic prompt for non-graphical terminals
 if [[ "$TERM" != xterm* ]] && [ -f $GBT__HOME/themes/basic.sh ]; then
