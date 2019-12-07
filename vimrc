@@ -71,3 +71,14 @@ colorscheme dracula
 
 " My keybindings
 autocmd Filetype java inoremap ;p System.out.print
+
+
+" highlight the current line in insert mode
+"autocmd InsertEnter,InsertLeave * set cul!
+
+
+" change cursor to i beam when in insert mode
+if has("autocmd")
+  au InsertEnter * silent execute "!echo -ne '\e[6 q'"
+  au InsertLeave * silent execute "!echo -ne '\e[2 q'"
+endif
