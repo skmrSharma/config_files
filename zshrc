@@ -24,16 +24,7 @@ setopt rmstarsilent
 setopt interactivecomments
 
 # Keybinding
-bindkey -e
-bindkey '^i' expand-or-complete-prefix
-bindkey '^[[1;5C' forward-word
-bindkey '^[[1;5D' backward-word
-bindkey '^[[H' beginning-of-line
-bindkey '^[[F' end-of-line
-bindkey "${terminfo[khome]}" beginning-of-line
-bindkey "${terminfo[kend]}" end-of-line
-bindkey "${terminfo[kcbt]}" reverse-menu-complete
-bindkey "${terminfo[kdch1]}" delete-char
+bindkey -v
 autoload -U select-word-style
 select-word-style bash
 
