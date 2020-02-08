@@ -39,6 +39,8 @@ export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
 ###[ Other ]
+# Show system info using ufetch, visit https://gitlab.com/jschx/ufetch for more info.
+./ufetch-mint
 
 # Default editor
 export EDITOR='vim'
@@ -71,6 +73,7 @@ export GBT__HOME='/usr/share/gbt'
 if [ -f $GBT__HOME/sources/gbts/cmd/local.sh ]; then
     source $GBT__HOME/sources/gbts/cmd/local.sh
 fi
+
 alias ssh=gbt_ssh
 
 # Basic prompt for non-graphical terminals
@@ -81,6 +84,7 @@ fi
 # Load GBT theme
 #source $GBT__HOME/themes/square_brackets_multiline.sh
 #source ~/gbt_themes/theme1.sh
+#source $GBT__HOME/themes/mrdrup.sh
 
 # My own configuration
 export GBT_CAR_DIR_DEPTH="3"
