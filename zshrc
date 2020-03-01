@@ -52,6 +52,8 @@ alias ls='ls --color=auto'
 alias freemem='free -h | awk '/^Mem:/ {print $3 "/" $2}''
 alias cpuhogs='ps axch -o cmd,%cpu --sort=-%cpu | head'
 alias memhogs='ps axch -o cmd,%mem --sort=-%mem | head'
+alias backup='~/.my_scripts/create_backup.sh'
+alias dmp3='youtube-dl -x --add-metadata --audio-format mp3 --audio-quality 0' 
 
 # Midnight Commander chdir enhancement
 if [ -f /usr/lib/mc/mc.sh ]; then
