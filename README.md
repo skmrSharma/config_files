@@ -2,7 +2,7 @@
 contains the config files or rc files for different programs that i use.
 ## Plugins that I use
 ### Vim:
-* dracula theme
+* Check `call#plug#begin()` section in vimrc
 ### ZSH:
 * GBT
 * ufetch
