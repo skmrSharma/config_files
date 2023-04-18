@@ -5,6 +5,7 @@ contains the config files or rc files for different programs that i use.
 * Install [vim-plug](https://github.com/junegunn/vim-plug)
 * Check `call plug#begin()` section in vimrc
 * **Colorscheme**: Zenburn \([link](https://github.com/jnurmine/Zenburn)\)
+* ripgrep used under the hood when :grep for superfast search results.
 ### ZSH:
 * GBT
 * ufetch
