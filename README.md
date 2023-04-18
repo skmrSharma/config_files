@@ -4,6 +4,7 @@ contains the config files or rc files for different programs that i use.
 ### Vim:
 * Install [vim-plug](https://github.com/junegunn/vim-plug)
 * Check `call plug#begin()` section in vimrc
+* **Colorscheme**: Zenburn \([link](https://github.com/jnurmine/Zenburn)\)
 ### ZSH:
 * GBT
 * ufetch
