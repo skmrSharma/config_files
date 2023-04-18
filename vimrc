@@ -34,6 +34,11 @@ if has("syntax")
   syntax on
 endif
 
+" Change grep to ripgrep if available
+if executable('rg')
+  set grepprg=rg\ --vimgrep
+endif
+
 "Remap jj to Esc 
 inoremap jj <ESC>
 
@@ -67,8 +72,11 @@ Plug 'dense-analysis/ale'
 Plug 'tpope/vim-surround'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tpope/vim-commentary'
+Plug 'mhinz/vim-signify' 
+Plug 'ervandew/supertab'
 
 call plug#end()
 "call plug#helptags()
 
 let g:ale_completion_enabled=1
+let g:ale_cursor_detail = 1
