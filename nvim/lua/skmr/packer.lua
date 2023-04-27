@@ -11,19 +11,9 @@ return require('packer').startup(function(use)
 		requires = { {'nvim-lua/plenary.nvim'} }
 	}
 
-	use 'RRethy/nvim-base16'
-
-    use 'itchyny/lightline.vim'
-
-    use 'protesilaos/prot16-vim'
-
-    use 'lifepillar/vim-gruvbox8'
-
-    use 'ellisonleao/gruvbox.nvim'
+    -- use 'itchyny/lightline.vim'
 
     use "lukas-reineke/indent-blankline.nvim"
-
-    use "monsonjeremy/onedark.nvim"
 
     use {
         'numToStr/Comment.nvim',
@@ -31,10 +21,21 @@ return require('packer').startup(function(use)
             require('Comment').setup()
         end
     }
+    use "tpope/vim-surround"
+    -- themes: start
+    use 'lifepillar/vim-gruvbox8'
+
+    use 'ellisonleao/gruvbox.nvim'
+    use "monsonjeremy/onedark.nvim"
 
     use "arturgoms/moonbow.nvim"
 
     use "rebelot/kanagawa.nvim"
+    use "phha/zenburn.nvim"
+    -- darkrose: add support for indent_blanklines.nvim,lualine.
+    use("water-sucks/darkrose.nvim")
+    use({ 'rose-pine/neovim', as = 'rose-pine' })
+    -- themes: end
 
     use {
         'nvim-treesitter/nvim-treesitter',
@@ -44,16 +45,12 @@ return require('packer').startup(function(use)
         end,
     }
 
-    use {
-        "folke/which-key.nvim",
-        config = function()
-            vim.o.timeout = true
-            vim.o.timeoutlen = 300
-            require("which-key").setup {
-                -- your configuration comes here
-                -- or leave it empty to use the default settings
-                -- refer to the configuration section below
-            }
-        end
-    }
+    use "folke/which-key.nvim"
+    
+    use "neovim/nvim-lspconfig" 
+    use "https://git.sr.ht/~ackyshake/VimCompletesMe.vim"
+    use "nvim-lualine/lualine.nvim"
+    use "folke/twilight.nvim"
+    -- use :BufOnly to delete all buffers except current open
+    use { "numtostr/BufOnly.nvim", cmd = "BufOnly" }
 end)

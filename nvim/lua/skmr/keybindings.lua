@@ -9,6 +9,11 @@ map('n','-',vim.cmd.Ex)
 
 map('i','jj','<Esc>')
 
+map('n','<leader>rc',[[:e ~/.config/nvim/init.lua<CR>]])
+
+-- clear serach highlights on pressing 'Enter' in normal mode.
+-- map('n','<Return>',':noh<CR>')
+
 -- Search terms stay in middle of the screen
 map("n", "n", "nzzzv")
 map("n", "N", "Nzzzv")
@@ -22,6 +27,17 @@ map("n", "<leader>Y", [["+Y]])
 
 -- replace the word current cursor is on
 map("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+
+-- split navigation
+map('n','<C-h>','<C-w>h')
+map('n','<C-l>','<C-w>l')
+map('n','<C-k>','<C-w>k')
+map('n','<C-j>','<C-w>j')
+-- Resizing splits
+map('n','<C-Left>', '<C-w><')
+map('n','<C-Right>', '<C-w>>')
+map('n','<C-Up>', '<C-w>+')
+map('n','<C-Down>', '<C-w>-')
 
 if vim.g.neovide then
     map("n", "<leader>v", [["+p]])
