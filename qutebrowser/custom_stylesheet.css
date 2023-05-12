@@ -1,0 +1,23 @@
+:not(pre):not(code) {
+    /* font-family: Noto Sans !important; */
+    /* font-family: IBM Plex Sans Condensed !important; */
+    /* font-style: Light; */
+    /* font-family: Ubuntu Mono !important; */
+    /* font-family: Spleen 8x16 !important; */
+    /* font-family: Fira Sans !important; */
+    /* font-size: 16pt; */
+
+    /* font-family: Unifont !important; */  /* looks good only at 12pt size */
+    /* font-size: 12pt; */
+    /* font-family: Luculent;   
+    /* font-family: CozetteVector !important, Noto Color Emoji; */
+    font-family: Fantasque Sans Mono;
+    font-size: 16pt;
+}
+
+code {
+	font-family: IBM Plex Mono Thin;
+	/* font-family: Unifont; */
+ /*    font-size: 12pt; */
+ /*    -webkit-font-smoothing: none; */
+}
