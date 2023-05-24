@@ -6,9 +6,10 @@ vim.o.formatprg="black - -q 2>/dev/null"
 vim.cmd([[
     augroup PyFormat
         autocmd!
-        autocmd BufWritePre <buffer> if executable('black') | :execute 'normal mfgggqGg`f' | endif
+        autocmd BufWritePre *.py if executable('black') | :execute 'normal mfgggqGg`f' | endif
     augroup END
 ]])
+
 -- if vim.fn.executable('black') == 1 then
 --     print("Hello World")
 -- end
