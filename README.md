@@ -19,6 +19,7 @@ contains the config files or rc files for different programs that i use.
 + This is my ash/sh profile.
 + tput comes from ncurses cli tools.
 + [afetch](https://github.com/13-CF/afetch) is used with custom config. afetch must be compiled from source, to apply config changes.
++ hikari, and river window managers on tty1 and tty2 respectively.
 ### Qutebroswer
 + Catppuccin theme for qutebroswer. Get from github.
 + Unifont, Linux Libertine font set, Terminus, mononoki fonts.
@@ -27,5 +28,3 @@ contains the config files or rc files for different programs that i use.
 ### foot
 + A wayland only terminal emulator.
 + Gohufont, and mononoki for italics.
-### River
-+ Tiling window manager on wayland.
