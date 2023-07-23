@@ -19,3 +19,8 @@ contains the config files or rc files for different programs that i use.
 + This is my ash/sh profile.
 + tput comes from ncurses cli tools.
 + [afetch](https://github.com/13-CF/afetch) is used with custom config. afetch must be compiled from source, to apply config changes.
+### Qutebroswer
++ Catppuccin theme for qutebroswer. Get from github.
++ Unifont, Linux Libertine font set, Terminus, mononoki fonts.
++ mpv as external video player.
++ feh as external image viewer.
