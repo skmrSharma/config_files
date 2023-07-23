@@ -24,3 +24,8 @@ contains the config files or rc files for different programs that i use.
 + Unifont, Linux Libertine font set, Terminus, mononoki fonts.
 + mpv as external video player.
 + feh as external image viewer.
+### foot
++ A wayland only terminal emulator.
++ Gohufont, and mononoki for italics.
+### River
++ Tiling window manager on wayland.
