@@ -28,3 +28,5 @@ contains the config files or rc files for different programs that i use.
 ### foot
 + A wayland only terminal emulator.
 + Gohufont, and mononoki for italics.
+### afetch
++ Clone the afetch repo, then move the included config.h from here to src/ in the local cloned afetch repo. And compile.
