@@ -6,14 +6,14 @@ return require('packer').startup(function(use)
 	use 'wbthomason/packer.nvim'
 
 	use {
-		'nvim-telescope/telescope.nvim', tag = '0.1.1',
+		'nvim-telescope/telescope.nvim', tag = '0.1.2',
 		-- or                            , branch = '0.1.x',
 		requires = { {'nvim-lua/plenary.nvim'} }
 	}
 
     -- use 'itchyny/lightline.vim'
 
-    use "lukas-reineke/indent-blankline.nvim"
+    use {"lukas-reineke/indent-blankline.nvim", tag = 'v2.20.8'}
 
     use {
         'numToStr/Comment.nvim',
@@ -35,6 +35,11 @@ return require('packer').startup(function(use)
     -- darkrose: add support for indent_blanklines.nvim,lualine.
     use("water-sucks/darkrose.nvim")
     use({ 'rose-pine/neovim', as = 'rose-pine' })
+    use "nyngwang/nvimgelion"
+    use "projekt0n/caret.nvim"
+    use "kamwitsta/flatwhite-vim"
+    use "AlessandroYorba/Sierra"
+    use "andreasvc/vim-256noir"
     -- themes: end
 
     use {
@@ -45,12 +50,28 @@ return require('packer').startup(function(use)
         end,
     }
 
-    use "folke/which-key.nvim"
-    
+    -- use "folke/which-key.nvim"
+
     use "neovim/nvim-lspconfig" 
     use "https://git.sr.ht/~ackyshake/VimCompletesMe.vim"
     use "nvim-lualine/lualine.nvim"
-    use "folke/twilight.nvim"
     -- use :BufOnly to delete all buffers except current open
     use { "numtostr/BufOnly.nvim", cmd = "BufOnly" }
+    use "SmiteshP/nvim-navic"
+    use "tpope/vim-repeat"
+    -- use "ggandor/leap.nvim"
+    -- use "ggandor/leap-spooky.nvim"
+    use "rlane/pounce.nvim"
+    use "akinsho/bufferline.nvim"
+    -- Peeking the buffer while entering command :{number}
+    use "nacro90/numb.nvim"
+    -- more textobjects like functions
+    use({
+        "nvim-treesitter/nvim-treesitter-textobjects",
+        after = "nvim-treesitter",
+        requires = "nvim-treesitter/nvim-treesitter",
+    })
+    use 'sidebar-nvim/sidebar.nvim'
+    -- for running shell custom commands and testing quickly.
+    use 'arjunmahishi/flow.nvim'
 end)

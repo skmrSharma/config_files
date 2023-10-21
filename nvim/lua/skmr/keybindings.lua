@@ -19,7 +19,11 @@ map("n", "n", "nzzzv")
 map("n", "N", "Nzzzv")
 
 -- vim by default has same buffer for copy-paste, this changes it so that highlighted text is saved into void buffer, and the earlier copied text sustains
-map("x", "<leader>p", [["_dP]])
+-- map("x", "<leader>p", [["_dP]])
+
+-- system clipboard paste
+map("n", "<leader>p", [["+p]])
+map("n", "<leader>P", [["+P]])
 
 -- copy to system clipboard (Y yanks entire line normally, could also do yy)
 map({"n", "v"}, "<leader>y", [["+y]])
@@ -39,17 +43,14 @@ map('n','<C-Right>', '<C-w>>')
 map('n','<C-Up>', '<C-w>+')
 map('n','<C-Down>', '<C-w>-')
 
-if vim.g.neovide then
-    map("n", "<leader>v", [["+p]])
-end
--- scale fonts in Neovide
-vim.g.neovide_scale_factor = 1.0
-local change_scale_factor = function(delta)
-  vim.g.neovide_scale_factor = vim.g.neovide_scale_factor * delta
-end
-map("n", "<C-=>", function()
-  change_scale_factor(1.25)
-end)
-map("n", "<C-->", function()
-  change_scale_factor(1/1.25)
-end)
+-- next and previous buffers, taken from vim-unimpaired
+-- map('n', ']b', ':bnext<CR>')
+-- map('n', '[b', ':bprevious<CR>')
+map('n', '<M-]>', ':bnext<CR>')
+map('n', '<M-[>', ':bprevious<CR>')
+
+-- escape in terminal mode
+map('t', '<Esc>', [[<C-\><C-n>]])
+
+-- escape to remove search highlights
+map('n', '<Esc>', ':noh<CR>')

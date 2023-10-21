@@ -19,10 +19,10 @@ o.showmode = false
 --vim.cmd.colorscheme('base16-onedark')
 -- vim.cmd.colorscheme('moonbow')  -- gruvbox like theme
 -- vim.cmd.colorscheme("kanagawa")
-vim.cmd.colorscheme('zenburn')  
+-- vim.cmd.colorscheme('zenburn')  
+-- vim.cmd.colorscheme('rose-pine-moon')
+vim.cmd.colorscheme('sierra')
 -- vim.cmd.colorscheme('darkrose')  
-
-o.guifont = 'JetBrains Mono:h16'
 
 -- netrw settings
 g.netrw_hide = true
@@ -34,6 +34,12 @@ if g.neovide then
     g.neovide_cursor_trail_size = 0.1
 end
 
+vim.opt.completeopt:remove {"preview"}
+
+ -- super-cheap git blame stolen from
+ -- https://gist.github.com/romainl/5b827f4aafa7ee29bdc70282ecc31640
+vim.cmd [[command! -range GB echo join(systemlist("git -C " . shellescape(expand('%:p:h')) . " blame -L <line1>,<line2> " . expand('%:t')), "\n")]]
+
 -- clipboard for wsl
 vim.cmd [[let g:clipboard = {
                 \   'name': 'WslClipboard',
@@ -42,8 +48,8 @@ vim.cmd [[let g:clipboard = {
                 \      '*': '/mnt/c/Windows/System32/clip.exe',
                 \    },
                 \   'paste': {
-                \      '+': 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
-                \      '*': 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
+                \      '+': '/mnt/c/Users/Sukumara/AppData/Local/Microsoft/WindowsApps/pwsh.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
+                \      '*': '/mnt/c/Users/Sukumara/AppData/Local/Microsoft/WindowsApps/pwsh.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
                 \   },
                 \   'cache_enabled': 0,
                 \ } ]]

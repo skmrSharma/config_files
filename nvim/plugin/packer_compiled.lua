@@ -88,15 +88,40 @@ _G.packer_plugins = {
     path = "/root/.local/share/nvim/site/pack/packer/start/Comment.nvim",
     url = "https://github.com/numToStr/Comment.nvim"
   },
+  Sierra = {
+    loaded = true,
+    path = "/root/.local/share/nvim/site/pack/packer/start/Sierra",
+    url = "https://github.com/AlessandroYorba/Sierra"
+  },
   ["VimCompletesMe.vim"] = {
     loaded = true,
     path = "/root/.local/share/nvim/site/pack/packer/start/VimCompletesMe.vim",
     url = "https://git.sr.ht/~ackyshake/VimCompletesMe.vim"
   },
+  ["bufferline.nvim"] = {
+    loaded = true,
+    path = "/root/.local/share/nvim/site/pack/packer/start/bufferline.nvim",
+    url = "https://github.com/akinsho/bufferline.nvim"
+  },
+  ["caret.nvim"] = {
+    loaded = true,
+    path = "/root/.local/share/nvim/site/pack/packer/start/caret.nvim",
+    url = "https://github.com/projekt0n/caret.nvim"
+  },
   ["darkrose.nvim"] = {
     loaded = true,
     path = "/root/.local/share/nvim/site/pack/packer/start/darkrose.nvim",
     url = "https://github.com/water-sucks/darkrose.nvim"
+  },
+  ["flatwhite-vim"] = {
+    loaded = true,
+    path = "/root/.local/share/nvim/site/pack/packer/start/flatwhite-vim",
+    url = "https://github.com/kamwitsta/flatwhite-vim"
+  },
+  ["flow.nvim"] = {
+    loaded = true,
+    path = "/root/.local/share/nvim/site/pack/packer/start/flow.nvim",
+    url = "https://github.com/arjunmahishi/flow.nvim"
   },
   ["gruvbox.nvim"] = {
     loaded = true,
@@ -123,15 +148,37 @@ _G.packer_plugins = {
     path = "/root/.local/share/nvim/site/pack/packer/start/moonbow.nvim",
     url = "https://github.com/arturgoms/moonbow.nvim"
   },
+  ["numb.nvim"] = {
+    loaded = true,
+    path = "/root/.local/share/nvim/site/pack/packer/start/numb.nvim",
+    url = "https://github.com/nacro90/numb.nvim"
+  },
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "/root/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
   },
+  ["nvim-navic"] = {
+    loaded = true,
+    path = "/root/.local/share/nvim/site/pack/packer/start/nvim-navic",
+    url = "https://github.com/SmiteshP/nvim-navic"
+  },
   ["nvim-treesitter"] = {
     loaded = true,
     path = "/root/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
+  },
+  ["nvim-treesitter-textobjects"] = {
+    load_after = {},
+    loaded = true,
+    needs_bufread = false,
+    path = "/root/.local/share/nvim/site/pack/packer/opt/nvim-treesitter-textobjects",
+    url = "https://github.com/nvim-treesitter/nvim-treesitter-textobjects"
+  },
+  nvimgelion = {
+    loaded = true,
+    path = "/root/.local/share/nvim/site/pack/packer/start/nvimgelion",
+    url = "https://github.com/nyngwang/nvimgelion"
   },
   ["onedark.nvim"] = {
     loaded = true,
@@ -148,35 +195,45 @@ _G.packer_plugins = {
     path = "/root/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
+  ["pounce.nvim"] = {
+    loaded = true,
+    path = "/root/.local/share/nvim/site/pack/packer/start/pounce.nvim",
+    url = "https://github.com/rlane/pounce.nvim"
+  },
   ["rose-pine"] = {
     loaded = true,
     path = "/root/.local/share/nvim/site/pack/packer/start/rose-pine",
     url = "https://github.com/rose-pine/neovim"
+  },
+  ["sidebar.nvim"] = {
+    loaded = true,
+    path = "/root/.local/share/nvim/site/pack/packer/start/sidebar.nvim",
+    url = "https://github.com/sidebar-nvim/sidebar.nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/root/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
-  ["twilight.nvim"] = {
+  ["vim-256noir"] = {
     loaded = true,
-    path = "/root/.local/share/nvim/site/pack/packer/start/twilight.nvim",
-    url = "https://github.com/folke/twilight.nvim"
+    path = "/root/.local/share/nvim/site/pack/packer/start/vim-256noir",
+    url = "https://github.com/andreasvc/vim-256noir"
   },
   ["vim-gruvbox8"] = {
     loaded = true,
     path = "/root/.local/share/nvim/site/pack/packer/start/vim-gruvbox8",
     url = "https://github.com/lifepillar/vim-gruvbox8"
   },
+  ["vim-repeat"] = {
+    loaded = true,
+    path = "/root/.local/share/nvim/site/pack/packer/start/vim-repeat",
+    url = "https://github.com/tpope/vim-repeat"
+  },
   ["vim-surround"] = {
     loaded = true,
     path = "/root/.local/share/nvim/site/pack/packer/start/vim-surround",
     url = "https://github.com/tpope/vim-surround"
-  },
-  ["which-key.nvim"] = {
-    loaded = true,
-    path = "/root/.local/share/nvim/site/pack/packer/start/which-key.nvim",
-    url = "https://github.com/folke/which-key.nvim"
   },
   ["zenburn.nvim"] = {
     loaded = true,
@@ -190,6 +247,11 @@ time([[Defining packer_plugins]], false)
 time([[Config for Comment.nvim]], true)
 try_loadstring("\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\fComment\frequire\0", "config", "Comment.nvim")
 time([[Config for Comment.nvim]], false)
+-- Load plugins in order defined by `after`
+time([[Sequenced loading]], true)
+vim.cmd [[ packadd nvim-treesitter ]]
+vim.cmd [[ packadd nvim-treesitter-textobjects ]]
+time([[Sequenced loading]], false)
 
 -- Command lazy-loads
 time([[Defining lazy-load commands]], true)
