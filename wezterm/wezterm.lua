@@ -10,10 +10,19 @@ if wezterm.config_builder then
   config = wezterm.config_builder()
 end
 
+config.check_for_updates = false
+
 -- This is where you actually apply your config choices
 -- config.color_scheme = 'Batman'
 config.color_scheme = 'Kanagawa (Gogh)'
-config.font = wezterm.font 'Source Code Pro'
+-- config.font = wezterm.font 'Source Code Pro'
+-- config.font = wezterm.font 'BlexMono Nerd Font Mono'
+-- config.font = wezterm.font_with_fallback({'Hasklig','Agave','BlexMono Nerd Font Mono','Hurmit Nerd Font Mono','Noto Sans Math'})
+config.font = wezterm.font_with_fallback({'Fisa Code','Noto Sans Math'})
+-- config.font = wezterm.font 'Fusion Pixel monospaced'
+-- config.font = wezterm.font 'Envy Code R'
+-- Hasklig -> Source code pro with ligatures
+-- config.font = wezterm.font 'Hasklig'
 
 -- Spawn a alpine wsl shell in login mode
 config.default_prog = { [[C:\\Users\\Sukumara\\AppData\\Local\\Microsoft\\WindowsApps\\Alpine.exe]] }
