@@ -21,7 +21,12 @@ o.showmode = false
 -- vim.cmd.colorscheme("kanagawa")
 -- vim.cmd.colorscheme('zenburn')  
 -- vim.cmd.colorscheme('rose-pine-moon')
-vim.cmd.colorscheme('sierra')
+-- vim.cmd.colorscheme('deepwhite')
+-- vim.cmd.colorscheme('sierra')
+-- termguicolors required for nvimgelion
+vim.o.termguicolors = true
+-- vim.cmd.colorscheme('nvimgelion')
+vim.cmd.colorscheme('modus_operandi')
 -- vim.cmd.colorscheme('darkrose')  
 
 -- netrw settings
@@ -41,15 +46,15 @@ vim.opt.completeopt:remove {"preview"}
 vim.cmd [[command! -range GB echo join(systemlist("git -C " . shellescape(expand('%:p:h')) . " blame -L <line1>,<line2> " . expand('%:t')), "\n")]]
 
 -- clipboard for wsl
-vim.cmd [[let g:clipboard = {
-                \   'name': 'WslClipboard',
-                \   'copy': {
-                \      '+': '/mnt/c/Windows/System32/clip.exe',
-                \      '*': '/mnt/c/Windows/System32/clip.exe',
-                \    },
-                \   'paste': {
-                \      '+': '/mnt/c/Users/Sukumara/AppData/Local/Microsoft/WindowsApps/pwsh.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
-                \      '*': '/mnt/c/Users/Sukumara/AppData/Local/Microsoft/WindowsApps/pwsh.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
-                \   },
-                \   'cache_enabled': 0,
-                \ } ]]
+-- vim.cmd [[let g:clipboard = {
+--                 \   'name': 'WslClipboard',
+--                 \   'copy': {
+--                 \      '+': '/mnt/c/Windows/System32/clip.exe',
+--                 \      '*': '/mnt/c/Windows/System32/clip.exe',
+--                 \    },
+--                 \   'paste': {
+--                 \      '+': '/mnt/c/Users/Sukumara/AppData/Local/Microsoft/WindowsApps/pwsh.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
+--                 \      '*': '/mnt/c/Users/Sukumara/AppData/Local/Microsoft/WindowsApps/pwsh.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
+--                 \   },
+--                 \   'cache_enabled': 0,
+--                 \ } ]]

@@ -54,3 +54,6 @@ map('t', '<Esc>', [[<C-\><C-n>]])
 
 -- escape to remove search highlights
 map('n', '<Esc>', ':noh<CR>')
+
+map('n', '<Enter>', 'o<ESC>')
+map('n', '<S-Enter>', 'O<ESC>')

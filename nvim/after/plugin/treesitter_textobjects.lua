@@ -15,7 +15,7 @@ require'nvim-treesitter.configs'.setup {
               -- nvim_buf_set_keymap) which plugins like which-key display
               ["ic"] = { query = "@class.inner", desc = "Select inner part of a class region" },
               -- You can also use captures from other query groups like `locals.scm`
-              ["as"] = { query = "@scope", query_group = "locals", desc = "Select language scope" },
+              -- ["as"] = { query = "@scope", query_group = "locals", desc = "Select language scope" },
           },
           -- You can choose the select mode (default is charwise 'v')
           --
@@ -27,7 +27,7 @@ require'nvim-treesitter.configs'.setup {
           selection_modes = {
               ['@parameter.outer'] = 'v', -- charwise
               ['@function.outer'] = 'V', -- linewise
-              ['@class.outer'] = '<c-v>', -- blockwise
+              ['@class.outer'] = 'V', -- linewise
           },
           -- If you set this to `true` (default is `false`) then any textobject is
           -- extended to include preceding or succeeding whitespace. Succeeding
@@ -38,7 +38,7 @@ require'nvim-treesitter.configs'.setup {
           -- * query_string: eg '@function.inner'
           -- * selection_mode: eg 'v'
           -- and should return true of false
-          include_surrounding_whitespace = true,
+          include_surrounding_whitespace = false,
       },
       swap = {
           enable = true,

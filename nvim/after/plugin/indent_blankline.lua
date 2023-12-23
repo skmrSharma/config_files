@@ -3,7 +3,7 @@ local indent_blankline = require("indent_blankline")
 -- vim.cmd [[highlight IndentBlanklineChar guifg=#00FF00 gui=nocombine]]
 indent_blankline.setup {
 --    char_highlight_list={'#95b4e6'},
-    filetype={'python'},
+    filetype={'python','nix'},
     show_current_context=true,
     show_current_context_start=true
 }

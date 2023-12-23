@@ -13,4 +13,11 @@ vim.o.formatprg="black - -q 2>/dev/null"
 -- if vim.fn.executable('black') == 1 then
 --     print("Hello World")
 -- end
+
+-- to make python docstring as comments
+vim.cmd("hi link @string.documentation.python Comment")
+
 vim.keymap.set('n', '<space>f', 'mfgggqGg`f')
+vim.cmd [[
+    :TSContextDisable
+]]

@@ -1,5 +1,5 @@
 -- Only required if you have packer configured as `opt`
-vim.cmd [[packadd packer.nvim]]
+--vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
 	-- Packer can manage itself
@@ -40,6 +40,13 @@ return require('packer').startup(function(use)
     use "kamwitsta/flatwhite-vim"
     use "AlessandroYorba/Sierra"
     use "andreasvc/vim-256noir"
+    use "Verf/deepwhite.nvim"
+    -- has only two colors - black and amber
+    use "camgunz/amber"
+    use "ribru17/bamboo.nvim"
+    use "savq/melange-nvim"
+    use "space-chalk/spacechalk.nvim"
+    use "miikanissi/modus-themes.nvim"
     -- themes: end
 
     use {
@@ -55,9 +62,12 @@ return require('packer').startup(function(use)
     use "neovim/nvim-lspconfig" 
     use "https://git.sr.ht/~ackyshake/VimCompletesMe.vim"
     use "nvim-lualine/lualine.nvim"
+    -- to show lsp-progress in lualine
+    use "WhoIsSethDaniel/lualine-lsp-progress.nvim"
     -- use :BufOnly to delete all buffers except current open
     use { "numtostr/BufOnly.nvim", cmd = "BufOnly" }
     use "SmiteshP/nvim-navic"
+    use "nvim-treesitter/nvim-treesitter-context"
     use "tpope/vim-repeat"
     -- use "ggandor/leap.nvim"
     -- use "ggandor/leap-spooky.nvim"
