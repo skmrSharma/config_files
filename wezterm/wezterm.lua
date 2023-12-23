@@ -14,26 +14,31 @@ config.check_for_updates = false
 
 -- This is where you actually apply your config choices
 -- config.color_scheme = 'Batman'
-config.color_scheme = 'Kanagawa (Gogh)'
+-- config.color_scheme = 'Kanagawa (Gogh)'
+-- config.color_scheme = 'Sequoia Monochrome'
+-- config.color_scheme = 'Solarized Darcula'
+-- config.color_scheme = 'Synthwave Alpha (Gogh)'
+-- config.color_scheme = 'Nature Suede (terminal.sexy)'
+-- config.color_scheme = 'Numix Darkest (terminal.sexy)'
+-- config.color_scheme = 'N0tch2k'
+config.color_scheme = 'Modus Operandi'
+-- config.color_scheme = 'Modus Vivendi'
 -- config.font = wezterm.font 'Source Code Pro'
 -- config.font = wezterm.font 'BlexMono Nerd Font Mono'
 -- config.font = wezterm.font_with_fallback({'Hasklig','Agave','BlexMono Nerd Font Mono','Hurmit Nerd Font Mono','Noto Sans Math'})
-config.font = wezterm.font_with_fallback({'Fisa Code','Noto Sans Math'})
+
+-- pragmata config -> looks good on terminal
+-- config.font = wezterm.font_with_fallback({'Pragmatasevka', 'Fisa Code','Hasklig','Fusion Pixel 12px Monospaced latin'})
+-- config.font_size = 24.0
+
+-- source code pro config -> more readablity for code
+config.font = wezterm.font_with_fallback({'Hasklig','SauceCodePro Nerd Font Mono'})
+config.font_size = 12.0
+
 -- config.font = wezterm.font 'Fusion Pixel monospaced'
 -- config.font = wezterm.font 'Envy Code R'
 -- Hasklig -> Source code pro with ligatures
 -- config.font = wezterm.font 'Hasklig'
-
--- Spawn a alpine wsl shell in login mode
-config.default_prog = { [[C:\\Users\\Sukumara\\AppData\\Local\\Microsoft\\WindowsApps\\Alpine.exe]] }
-
--- define your own entries using the launch_menu configuration setting.
-config.launch_menu = {
-    {
-        label = 'Powershell core',
-        args = { [[C:\\Users\\Sukumara\\AppData\\Local\\Microsoft\\WindowsApps\\pwsh.exe]] }
-    }
-}
 
 config.hide_tab_bar_if_only_one_tab = true
 config.window_padding = {
@@ -42,6 +47,8 @@ config.window_padding = {
     left = 0,
     right = 0
 }
+
+config.enable_wayland = false
 
 -- function to rename a tab title
 local act = wezterm.action
@@ -68,6 +75,15 @@ config.keys = {
     action = wezterm.action.CloseCurrentPane { confirm = true },
   }
 }
+
+-- Window configuration: START ----
+local mux = wezterm.mux
+
+wezterm.on("gui-startup", function()
+  local tab, pane, window = mux.spawn_window(cmd or {})
+  window:gui_window():toggle_fullscreen()
+end)
+-- Window configuration: END ----
 
 -- and finally, return the configuration to wezterm
 return config
